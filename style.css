@@ -64,3 +64,12 @@ body{
     font-weight: 600;
     color: #606060;
 }
+@media screen and (max-width: 700px) {
+    /* Styles for screens up to 768 pixels wide */
+    .card form {
+        width: 250px;
+      }
+      .card{
+        width: 300px;
+      }
+  }
