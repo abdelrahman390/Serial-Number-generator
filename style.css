@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #7d7de1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: arial;
+}
+.card{
+    height: 450px;
+    width: 500px;
+    background-color: #e3e3e3;
+    border-radius: 15px;
+}
+.card h1{
+    text-align: center;
+    margin-top: 30px;
+}
+.card .data{
+    display: none;
+}
+.serial_outPut span{
+    color: red;
+}
+.card form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 360px;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.card form .label_name , .label_age{
+    display: flex;
+    flex-direction: column;
+}
+.card form .label_name label , .label_age label{
+    margin-bottom: 10px;
+}
+.card form .label_name input , .label_age input{
+    border: none;
+    background-color: white;
+    width: 250px;
+    height: 25px;
+}
+.card form .label_name input:focus-visible , .label_age input:focus-visible {
+    outline: none;
+    font-size: 15px;
+}
+.card form h1{
+    margin: 0 auto;
+    padding: 28px;
+    border: none;
+    border-radius: 16px;
+    background-color: #c7f160;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: #606060;
+}

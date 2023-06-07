@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h1 class="card_name">card serial generate</h1>
+        <form class="FirstForm">
+            <div class="label_name">
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" required>
+                <!-- pattern="[A-Za-z]+"  -->
+            </div>
+            <div class="label_age">
+                <label for="age">age*</label>
+                <input type="text" id="age" name="age"  required>
+                <!-- pattern="[1-9]{2}" -->
+            </div>
+            <!-- <button id="button" class="submit" type="submit">Git Serial Nimber</button> -->
+            <h1 type="submit">Git Serial Nimber</h1>
+          </form>
+
+          <div class="data">
+            <h1 class="name_output">your name</h1>
+            <h1 class="age_outPut">your age</h1>
+            <h1 class="serial_outPut">your id : <span></span></h1>
+          </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
