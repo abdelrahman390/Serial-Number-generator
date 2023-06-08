@@ -1,14 +1,12 @@
-let nameInput = document.querySelector("#name")
-let ageInput = document.querySelector("#age")
-let submitButton = document.querySelector(".card form h1")
-let card = document.querySelector(".FirstForm")
+let nameInput = document.querySelector("#name"),
+    ageInput = document.querySelector("#age"),
+    card = document.querySelector("form"),
+    submitButton = document.querySelector("form .button");
 
-// let submitButton = document.querySelector("#button")
-
-let userName = document.querySelector(".name_output")
-let age = document.querySelector(".age_outPut")
-let serialoutput = document.querySelector(".serial_outPut span")
-let data = document.querySelector(".data")
+let userName = document.querySelector(".name_output"),
+    age = document.querySelector(".age_outPut"),
+    serialoutput = document.querySelector(".serial_outPut span"),
+    data = document.querySelector(".data");
 
 
 submitButton.onclick = function (){
@@ -17,31 +15,32 @@ let curecters = "123456789qwertyuioplkjhgfdsazxcvbnm!@#$%^&*"
 let count = 10
 let randomNum = ""
 
-    if(!(nameInput = "")){
-console.log(nameInput)
-        for(let i = 0; i < count; i++ ){
+if (nameInput.value === "") {
+    alert("name field is empty");
+  } else if (ageInput.value === ""){
+    alert("age field is empty");
+  } else {
+    for(let i = 0; i < count; i++ ){
 
-            randomNum += curecters[Math.floor(Math.random() * curecters.length)]
-            // console.log(randomNum)
-            serialoutput.innerHTML = `${randomNum}`
-        
-        }
-            card.style.display = "none"
-            data.style.display = "block"
-        
-            userName.innerHTML = nameInput.value
-            age.innerHTML = ageInput.value
-
+        randomNum += curecters[Math.floor(Math.random() * curecters.length)]
+        // console.log(randomNum)
+        serialoutput.innerHTML = `${randomNum}`
+    
     }
+        card.style.display = "none"
+        data.style.display = "block"
+    
+        userName.innerHTML = nameInput.value
+        age.innerHTML = ageInput.value
+  }
+console.log(nameInput.value)
+
 
 }
-// hh();
-    // let submitButton = document.querySelector(".card form .submit")
-    // userName.innerHTML = nameInput.value
-    // age.innerHTML = nameInput.value
- 
 
-
+document.querySelector('form').onsubmit = e => {
+    e.preventDefault();
+}
 
 
 
