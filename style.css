@@ -21,11 +21,32 @@ body{
     text-align: center;
     margin-top: 30px;
 }
+.card .name_output span {
+    color: #6eb91b;
+}
+.card .age_outPut span {
+    color: red;
+}
 .card .data{
     display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 70px;
+    margin-top: 50px;
+}
+.card .data .button{
+    margin: 30px 85px 0;
+    padding: 28px;
+    border: none;
+    border-radius: 16px;
+    background-color: #c7f160;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: #606060;
 }
 .serial_outPut span{
-    color: red;
+    color: #313b85;
 }
 .card form{
     margin: auto;
@@ -72,4 +93,23 @@ body{
       .card{
         width: 300px;
       }
+      .card .data {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 38px;
+        margin-top: 20px;
+        font-size: 9px;
+    }
+      .card .data .button {
+        margin: 40px 18px 0;
+        padding: 28px;
+        border: none;
+        border-radius: 16px;
+        background-color: #c7f160;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        color: #606060;
+    }
   }
