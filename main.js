@@ -11,7 +11,7 @@ let userName = document.querySelector(".name_output"),
 
 submitButton.onclick = function (){
 
-let curecters = "123456789qwertyuioplkjhgfdsazxcvbnm!@#$%^&*"
+let curecters = "123456789qwertyuioplkjhgfdsazxcvbnm@#$%&"
 let count = 10
 let randomNum = ""
 
