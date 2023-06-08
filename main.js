@@ -3,15 +3,17 @@ let nameInput = document.querySelector("#name"),
     card = document.querySelector("form"),
     submitButton = document.querySelector("form .button");
 
-let userName = document.querySelector(".name_output"),
-    age = document.querySelector(".age_outPut"),
+let userName = document.querySelector(".name_output span"),
+    age = document.querySelector(".age_outPut span"),
     serialoutput = document.querySelector(".serial_outPut span"),
-    data = document.querySelector(".data");
+    data = document.querySelector(".data"),
+    copyButton = document.querySelector(".card .data .button"),
+    getserial = ""
 
 
 submitButton.onclick = function (){
 
-let curecters = "123456789qwertyuioplkjhgfdsazxcvbnm!@#$%^&*"
+let curecters = "123456789qwertyuioplkjhgfdsazxcvbnm@#$%&"
 let count = 10
 let randomNum = ""
 
@@ -33,9 +35,13 @@ if (nameInput.value === "") {
         randomNum += curecters[Math.floor(Math.random() * curecters.length)]
         // console.log(randomNum)
         serialoutput.innerHTML = `${randomNum}`
+        getserial = randomNum
     }
+
+    // getserial(randomNum);
+
         card.style.display = "none"
-        data.style.display = "block"
+        data.style.display = "flex"
     
         userName.innerHTML = nameInput.value
         age.innerHTML = ageInput.value
@@ -43,9 +49,36 @@ if (nameInput.value === "") {
 
 }
 
+
+
+
+copyButton.onclick = function getserial() {
+
+    var serial = document.querySelector(".serial_outPut span").innerHTML
+
+    console.log(serial)
+
+    document.designMode = "on";
+
+    serial.select();
+    serial.setSelectionRange(0, 99999); // For mobile devices
+  
+     // Copy the text inside the text field
+    navigator.clipboard.writeText(serial);
+  
+    // Alert the copied text
+    alert("Copied the text: " + serial);
+
+  }
+
 document.querySelector('form').onsubmit = e => {
     e.preventDefault();
 }
+
+
+
+
+
 
 
 
