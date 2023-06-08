@@ -16,12 +16,12 @@
 
             <div class="label_name">
                 <label for="name">Name*</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" pattern="[A-Za-z]+"  required>
             </div>
             
             <div class="label_age">
                 <label for="age">age*</label required>
-                <input type="text" id="age" name="age" required>
+                <input type="text" id="age" name="age" pattern="[1-9]{2}" required>
             </div>
 
 
@@ -39,5 +39,3 @@
     <script src="main.js"></script>
 </body>
 </html>
-                <!-- pattern="[A-Za-z]+"  -->
-                <!-- pattern="[1-9]{2}" -->
