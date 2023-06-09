@@ -5,10 +5,10 @@ let nameInput = document.querySelector("#name"),
 
 let userName = document.querySelector(".name_output span"),
     age = document.querySelector(".age_outPut span"),
-    serialoutput = document.querySelector(".serial_outPut span"),
+    serialoutput = document.querySelector(".serial_outPut input"),
     data = document.querySelector(".data"),
-    copyButton = document.querySelector(".card .data .button"),
-    getserial = ""
+    copyButton = document.querySelector(".card .data .button");
+
 
 
 submitButton.onclick = function (){
@@ -20,9 +20,9 @@ let randomNum = ""
 var NamePattern = /[A-Za-z]+/ig;
 var agePattern = /[0-9]/;
 
-
 if (nameInput.value === "") {
     alert("name field is empty");
+    console.log(alert(""))
   } else if (NamePattern.test(nameInput.value) === false){
     alert("name field format is wrong")
   } else if (ageInput.value === ""){
@@ -33,52 +33,34 @@ if (nameInput.value === "") {
     for(let i = 0; i < count; i++ ){
 
         randomNum += curecters[Math.floor(Math.random() * curecters.length)]
-        // console.log(randomNum)
-        serialoutput.innerHTML = `${randomNum}`
-        getserial = randomNum
+
+        serialoutput.value = `${randomNum}`
     }
-
-    // getserial(randomNum);
-
         card.style.display = "none"
         data.style.display = "flex"
-    
+  
         userName.innerHTML = nameInput.value
         age.innerHTML = ageInput.value
   }
-
 }
-
 
 
 
 copyButton.onclick = function getserial() {
 
-    var serial = document.querySelector(".serial_outPut span").innerHTML
-
-    console.log(serial)
-
     document.designMode = "on";
-
-    serial.select();
-    serial.setSelectionRange(0, 99999); // For mobile devices
+    serialoutput.select();
+    serialoutput.setSelectionRange(0, 99999); // For mobile devices
   
      // Copy the text inside the text field
-    navigator.clipboard.writeText(serial);
+    navigator.clipboard.writeText(serialoutput.value);
   
     // Alert the copied text
-    alert("Copied the text: " + serial);
+    alert("Copied the text: " + serialoutput.value);
 
   }
+
 
 document.querySelector('form').onsubmit = e => {
     e.preventDefault();
 }
-
-
-
-
-
-
-
-
